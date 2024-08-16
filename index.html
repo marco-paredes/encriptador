@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador|Eureka</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>    
+    <header class="header">
+        <nav class="header__nav">
+            <img src="assets/logo.png" alt="logo de Alura" id="logoInicial">
+            <h1 class="header__titulo">Encriptador EUREKA!</h1>
+        </nav>
+    </header>
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <p class="presentacion__contenido__texto" id="mensajeError"></p>
+            <textarea id="valorCampo" class="presentacion__contenido__campo" placeholder="Ingrese texto aquí"></textarea>
+            <p class="presentacion__contenido__texto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2"/></svg>
+                Solo letras minúsculas y sin acento
+            </p>
+            <div class="presentacion__contenido__botones">
+                <button onclick="iniciaEncriptacion()" class="boton__encriptar" id="botonEncriptar" >Encriptar</button>
+                <button onclick="iniciaDesencriptacion()" class="boton__desencriptar" id="botonDesencriptar" disabled>Desencriptar</button>
+            </div>
+        </section>
+        <aside class="resultado">
+            <img src="assets/dibujo.png" class="resultado__imagen" alt="Imagen del encriptador" id="imagenInicial">
+            <h2 class="resultado__mensaje__titulo">Ningún mensaje fue encontrado</h2>
+            <p class="resultado__mensaje__contenido" id="parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <textarea id="textoEncriptado" class="resultado__contenido__campo" hidden readonly></textarea>
+            <button onclick="copiarMensaje()" class="boton__copiar" id="botonCopiar" hidden>Copiar</button>
+        </aside>
+        
+    
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Marco Paredes - 2024</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
